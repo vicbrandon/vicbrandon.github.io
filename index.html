@@ -1,796 +1,707 @@
 <!DOCTYPE html>
-<html>
-<!--
-·   ···  ·  ·  ··
-·   ·  · ·  · ·  ·
-··· ···   ··   ··
--->
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="keywords" content="简历,IT男,求职,开源简历" />
-        <meta name="description" content="找个工作都不容易~简历开源，有兴趣的随便使用" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
 
-        <!--favicon图标-->
-        <link rel="icon" href="images/favicon.png" type="image/x-icon" />
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- Read and update content attributes accordingly  -->
 
-        <!--ios设备添加到主屏幕的图标-->
-        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+    />
 
-        <!--loading css-->
-        <link href="css/pace-theme-flash.css" rel="stylesheet" type="text/css">
+    <!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="Vic Brandon's Portfolio">
+<meta itemprop="description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
 
-        <!--全局定义css-->
-        <link href="css/style.css" rel="stylesheet">
+<!-- Reference screenshot of updated site's header in place of content -->
+<meta itemprop="image" content="assets/images/sharing-card.png">
 
-        <!--自适应css-->
-        <link href="css/responsive.css" rel="stylesheet">
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://ossportfolio.netlify.app">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vic Brandon's Portfolio">
+<meta property="og:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
 
-        <!--字体图标cdd-->
-        <link href="css/font.css" rel="stylesheet" type="text/css">
+<!-- Reference screenshot of updated site's header in content -->
+<meta property="og:image" content="assets/images/sharing-card.png">
 
-        <title>Vic Brandon</title>
-    </head>
-    <body>
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vic Brandon's Portfolio">
+<meta name="twitter:description" content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations.">
 
-        <!-- sound -->
-        <div class="sound_area">
-            <!-- <div class="sa_start circle"><i aria-hidden="true" data-icon="&#xe01b;"></i></div>
-            <div class="sa_info r5">
-                <ul>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>语音请使用/基于chrome浏览器</li>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>请允许使用您的麦克风</li>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>说"Hello"显示语音助手</li>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>说"Close"关闭窗口</li>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>说"Contact"显示联系方式</li>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>说"Works"显示项目/作品</li>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>说"Print"打印此简历</li>
-                    <li><i aria-hidden="true" data-icon="&#x4e;"></i>说"Goodbye"再见</li>
-                </ul>
-            </div> -->
+<!-- Reference screenshot of updated site's header in content -->
+<meta name="twitter:image" content="assets/images/sharing-card.png">
+
+
+<!-- Update favicon href attribute with image of yourself -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicons.png"
+      type="image/png"
+    />
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="style.css"  />
+    <script src="script.js" defer></script>
+
+    <!-- Your name here -->
+    <title>Vic Brandon's Portfolio</title>
+  </head>
+
+  <body>
+
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button"  class="menu-btn">menu</button>
         </div>
+      </div>
 
-        <div class="sound_help r5 sd">
-            <!-- <a href="javascript:;" class="close_help" aria-hidden="true" data-icon="&#x4d;"></a>
-            <h3><i aria-hidden="true" data-icon="&#xe01b;"></i>你好，我是语音小助手，请原谅我的愚钝...</h3>
-            <ul>
-                <li><i aria-hidden="true" data-icon="&#x51;"></i>关闭小助手请说"Over"</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"Close"关闭窗口</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"Contact (you)"显示联系方式</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"Print"打印此简历</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"Works"显示项目/作品</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"(number) one"显示项目1，共5个</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"(number) more"显示其他作品</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"next"或"down"查看项目/作品时切换下一个</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"previous"或"up"查看项目/作品时切换上一个</li>
-                <li><i aria-hidden="true" data-icon="&#x5b;"></i>说"Goodbye"再见</li>
-            </ul> -->
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">
+            <span>Hi, I'm Vic Brandon</span>
+            <span>Frontend Web Developer</span>
+          </h1>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            A frontend software engineer and interface designer who builds UX
+            rich accessible and performant websites.
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
         </div>
+      </div>
+    </header>
 
-        <!--print button-->
-        <!-- <a href="javascript:;" class="r5 button_print btn_green">打印</a> -->
+    <main>
+      <section class="client">
+        <div class="container">
+          <h2 class="h2">Trusted by</h2>
+          <div class="logos">
+            <!-- Replace alt with client/company name and src attributes of images with path to relative img of client logo -->
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/stripe.svg"
+                alt="Ideacraft"
+                class="logo hide to-top"
+              />
 
-        <div class="main">
-            <div class="content">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/datastax.svg"
+                alt="Golden grid"
+                class="logo"
+              />
 
-                <!--header-->
-                <div class="header clearfix">
-                    <div class="avatar">
-                        <a href="" class="avatar_pic circle"><em class="circle doing">Hello!</em></a>
-                        <b class="doing r5">Vic</b>
-                    </div>
-                    <div class="base">
-                        <p class="desc">Hello my name is</p>
-                        <h2>Vic Brandon</h2>
-                        <p>SOFTWARE ENGINEER</p>
-                        <span>
-                            <p><i aria-hidden="true" data-icon="&#xe01d;"></i>Cebu City</p>
-                            <p><a class="tel_me"><i aria-hidden="true" data-icon="&#xe010;"></i>brandonchanbaquero@gmail.com</a></p>
-                        </span>
-                    </div>
-                </div>
-
-                <!--information-->
-                <div class="information clearfix">
-
-                    <!--left-->
-                    <div class="info_area info_left info_content">
-
-                        <h5>My Story</h5>
-                        <p class=""><em class="count"></em><b>TODO </b> </p>
-                        <!-- <p class=""><em class="count"></em><b>The feeling I get of making something from nothing is very satisfying, specially when the end product is of a great use for the community. </b> </p>
-                        <p class=" "><em class="count"></em>Got my Bachelors Degree in Computer Engineering from University of San Carlos while working as a part time full stack software engineer.</p>
-                        <p class=" "><em class="count"></em>Proceeded to work as a Fullstack Software Engineer at a start up company. Developed a couple of projects which enhanced my skills and knowledge about the industry greatly.</p>
-                        <p class=" "><em class="count"></em>I now work as a Full Stack Software Engineer at Lanex Corporation.</p> -->
-
-                        <h5>Portfolio</h5>
-                        <p class=""><em class="count"></em><b>TODO </b> </p>
-                        <!-- <ul>
-                            <li class="clearfix">
-                                <div class="con">
-                                    <h3><i aria-hidden="true" data-icon="&#x5b;"></i>Baker Hughes a GE company - Subsea Connect<em>(HTML, CSS, Javascript (jQuery))</em></h3>
-                                    <p>Marketing website for Baker Hughes Subsea Connect project.</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="con">
-                                    <h3><i aria-hidden="true" data-icon="&#x5b;"></i>Foxpro Migration<em>(Node.JS)</em></h3>
-                                    <p>Migration of database from from DBF database to MariaDB. Transformed old data to coincide with the new schema.</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="con">
-                                    <h3><i aria-hidden="true" data-icon="&#x5b;"></i>Roommates with kids<em>(Laravel, jQuery, AWS)</em></h3>
-                                    <p>Housing options for single parents. For room owners and room finders.</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="con">
-                                    <h3><i aria-hidden="true" data-icon="&#x5b;"></i>PBMIS<em>(Laravel, Node Express, Vuejs)</em></h3>
-                                    <p>Pattys Bakeshop Information System<br>ERP + Automation of the production, inventory & auditing.</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="con">
-                                    <h3><i aria-hidden="true" data-icon="&#x5b;"></i>LCS<em>(Laravel, Node Express, Vuejs)</em></h3>
-                                    <p>Loreno Construction System <br>CMS, ERP & automation of the workflow and inventory.</p>
-                                </div>
-                            </li>
-                            <li class="clearfix">
-                                <div class="con">
-                                    <h3><i aria-hidden="true" data-icon="&#x5b;"></i>COI<em>(Laravel, Node Express, Vuejs)</em></h3>
-                                    <p>Cebu Orthopaedic Institute<br>ERP & automation for taking care of visiting patients and medical inventories.</p>
-                                </div>
-                            </li>
-                        </ul> -->
-
-
-                    </div>
-
-                    <!--right-->
-                    <div class="info_area info_right info_timeline">
-                        <h5><i aria-hidden="true" data-icon="&#x7d;"></i>Timeline</h5>
-                        <p class=""><em class="count"></em><b>TODO </b> </p>
-                        <!-- <ul>
-                            <li class="clearfix top" id="s5">
-                               
-                                <div class="dot"><b></b></div>
-                                
-                                <div class="con">
-                                    <h3>Lanex Corporation</h3>
-                                    <p>Software Engineer</p>
-                                    <p class="desc">2018.6 - Present</p>
-                                </div>
-                            </li>
-                            <li class="clearfix" id="s4">
-                                
-                                <div class="dot"><b></b></div>
-                     
-                                <div class="con">
-                                    <h3>1722 IT Services</h3>
-                                    <p>Junior Full Stack Web Developer</p>
-                                    <p class="desc">2017.10 - 2018.6</p>
-                                </div>
-                            </li>
-                            <li class="clearfix" id="s3">
-                                
-                                <div class="dot"><b></b></div>
-                                <div class="con">
-                                    <h3>Graduated from College</h3>
-                                    <p>Bachelors Degree in Computer Engineering</p>
-                                    <p class="desc">2012.6 - 2018.3</p>
-                                </div>
-                            </li>
-                        </ul> -->
-
-                        <h5>Skillsets</h5>
-                        <p class=""><em class="count"></em><b>TODO </b> </p>
-                        <!-- <dl class="clearfix">
-                            <dt><h6><i aria-hidden="true" data-icon="&#xe00d;"></i>Web Frontend<h6></dt>
-                            <dd></dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>HTML<em>5</em> & CSS<em>3</em></dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Javascript & Jquery</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Quasar Framework & Bootstrap</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Vue.js</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>RESTful API</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix mt20">
-                            <dt><h6><i aria-hidden="true" data-icon="&#xe038;"></i>Web Server Side<h6></dt>
-                            <dd></dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Laravel</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Node.js</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Web Sockets </dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix mt20">
-                            <dt><h6><i aria-hidden="true" data-icon="&#xe0ea;"></i>Database<h6></dt>
-                            <dd></dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>MySQL</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>MariaDB</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix mt20">
-                            <dt><h6><i aria-hidden="true" data-icon="&#xe109;"></i>DevOps<h6></dt>
-                            <dd></dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>AWS (EC2, SES, ROUTE53)</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Nginx</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Docker</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Apache</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl>
-                        <dl class="clearfix">
-                            <dt>Bash Scripting</dt>
-                            <dd>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <b></b>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                                <em></em>
-                            </dd>
-                        </dl> -->
-                    </div>
-
-                </div>
-
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/coke.svg"
+                alt="Theia"
+                class="logo hide to-bottom"
+              />
             </div>
-        </div>
-        
-        <!-- <div class="footer clearfix">
-            Powered By LDuo
-            <a href="https://github.com/lduo/resume" target="_blank">嘿！如果你喜欢~我已放到github供大家免费下载</a>
-        </div> -->
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/gm.svg"
+                alt="General motors"
+                class="logo hide to-top"
+              />
 
-        <!--个人基本信息-->
-        <div class="tip_avatar">
-            <a href="javascript:;" class="tip_close" aria-hidden="true" data-icon="&#x4d;"></a>
-            <div class="tip_avatar_con">
-                <div class="tip_right">
-                    <p class="en mt">Hello my name is</p>
-                    <h2>Vic Brandon</h2>
-                    <p>Full Stack Software Engineer</p>
-                    <!-- <p class="mt20">联系方式</p>                  -->
-                    <p><i aria-hidden="true" data-icon="&#xe010;"></i>brandonchanbaquero@gmail.com</p>
-                    <p class=""><em class="count"></em><b>TODO </b> </p>
-                    <!-- <p><i aria-hidden="true" data-icon="&#xe00b;"></i>17000000000</p> -->
-                    <!-- <p><i aria-hidden="true" data-icon="&#xe066;"></i>微信名称</p> -->
-                    <p class="mt20"><span class="wechat"></span></p>
-                </div>
-                <!--如果依然使用该头像请不要删掉()里的内容-->
-                <p class="desc">Cartoon just like me (Design by Jameskelly)</p>
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/shares.svg"
+                alt="Chippy"
+                class="logo"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/shopify.svg"
+                alt="Shopify"
+                class="logo hide to-bottom"
+              />
             </div>
-        </div>
-        <div class="tip_avatar_bg"></div>
-
-        <!--作品内容-->
-        <div class="tip_product sd">
-
-            <!--关闭作品展示-->
-            <a href="javascript:;" class="r5 tip_area_close" aria-hidden="true" data-icon="&#x4d;"></a>
-
-            <div id="tip_carousel" class="carousel slide" data-ride="carousel">
-
-                <!-- 作品区域 -->
-                <div class="carousel-inner">
-                    
-                    <!--作品1-->
-                    <div class="item active">
-
-                        <div class="banner product_h1">
-                            <div class="logo r5"></div>
-                            <div class="banner_bg"></div>
-                        </div>
-                        <div class="descprition">
-                            <h3><i aria-hidden="true" data-icon="&#xe0e6;"></i>爱工作</h3>
-                            <p>爱工作（临时名字，没有最终确定）是面向互联网企业的协同任务工具，由于本项目并未正式上线，所以我只介绍一些早期的设计思路。</p>
-                            <p class="pic">
-                                <img src="images/pic_lw_login.jpg" alt="登陆页" />
-                                <span>登陆页</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_lw_loginui.jpg" alt="登陆页UI" />
-                                <span>登陆页UI</span>
-                            </p>
-                            <p>登陆页有成员最新动态，方便成员在未登录状态下可直观了解内部公开信息，登录时当输入密码的时候（账号不为空）的时候登陆按钮高亮，如果输入错误密码会显示 找回密码按钮。</p>
-                            <p class="pic">
-                                <img src="images/pic_lw_timeline.jpg" alt="首页动态" />
-                                <span>首页动态</span>
-                            </p>
-                            <p>左侧个人信息区域背景和登陆页相同，切登陆页切换随即相应变化，可以折叠；通知、个人设置、日程等类似ios通知栏。</p>
-                            <p class="pic">
-                                <img src="images/pic_lw_timelineui.jpg" alt="全局UI" />
-                                <span>动态 & 部分UI</span>
-                            </p>
-                            <p>上图是一些局部的功能UI图，该项目涉及的页面很多，从项目最初头脑风暴 - 原型图 - 设计稿 - 协助前端一起开发，用了有5个月左右。</p>
-                            <div class="time">
-                                <em>2013</em>年<em>12</em>月<b>-</b><em>2014</em>年<em>4</em>月
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!--作品2-->
-                    <div class="item">
-                        
-                        <div class="banner product_h2">
-                            <div class="logo r5"></div>
-                            <div class="banner_bg"></div>
-                        </div>
-                        <div class="descprition">
-                            <h3><i aria-hidden="true" data-icon="&#xe013;"></i>哈市集<a href="http://www.hashiji.com" target="_blank" class="btn_green r5">访问</a></h3>
-                            <p>哈市集成立之初的想法是在2012年4月产生的，是一个衣物导购的网站，与其他稍有不同，不是由用户自己来分享，而是由自己挑选出来分享，当然，由于精力有限，不都是最佳。期间经历了3次改版（不会运营是鸡肋...），不过每次都很享受设计到代码到效果的感觉，相当过瘾。</p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_index.jpg" alt="首页" />
-                                <span>首页(10:00 - 11:00)</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_nav.jpg" alt="侧栏" />
-                                <span>侧栏</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_list.jpg" alt="分类" />
-                                <span>分类</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_goods.jpg" alt="衣物介绍" />
-                                <span>衣物介绍</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_time.jpg" alt="时间主题" />
-                                <span>时间主题</span>
-                            </p>
-                            <p>整站背景、按钮...是根据当前时间段响应时间更换颜色，使用户更有时间概念，而当在不同时段访问时也会增加新鲜感。</p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_responsive.jpg" alt="响应式布局" />
-                                <span>响应式布局</span>
-                            </p>                     
-                            <p class="pic">
-                                <img src="images/pic_hsj_menu.jpg" alt="菜单" />
-                                <span>顶部随滚动位置变化而变化</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_01.gif" alt="动效" />
-                                <span>侧栏动效</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_02.gif" alt="动效" />
-                                <span>衣物图片</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_hsj_03.gif" alt="动效" />
-                                <span>全景照片（暂已取消此功能）</span>
-                            </p>
-                            <div class="time">
-                                <em>2014</em>年<em>1</em>月<b>-</b><em>2014</em>年<em>2</em>月 业余时间
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!--作品3-->
-                    <div class="item">
-                        
-                        <div class="banner product_h3">
-                            <div class="logo r5"></div>
-                            <div class="banner_bg"></div>
-                        </div>
-                        <div class="descprition">
-                            <h3><i aria-hidden="true" data-icon="&#xe108;"></i>优你网<a href="http://www.yoniw.net" target="_blank" class="btn_green r5">访问</a></h3>
-                            <p>优你网是针对大学生的校园社区，主要核心是帮助大学生找兼职工作，还为在校大学生提供活动、优惠等。</p>
-                            <p class="quote">2013年4月来到优你网,这是家创业公司，很有激情，我们从设想到实施最后上线共用了5个月，因为从设计到最终完成只有2人，所以时间稍微长了些，我负责设计和前端，另一个人负责整个后端和数据库等，9月末我们一起去了北京，学习了解创业经验并寻找投资伙伴，虽然最终未能完成融资不过依然学了很多。</p>                          
-                            <p class="pic">
-                                <img src="images/pic_ynw_index.jpg" alt="登陆页" />
-                                <span>登陆页</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_ynw_home.jpg" alt="用户主页" />
-                                <span>用户主页</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_ynw_parttime.jpg" alt="兼职内容" />
-                                <span>兼职内容</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_ynw_circle.jpg" alt="圈子" />
-                                <span>圈子</span>
-                            </p>
-                            <p>整站采用响应式布局</p>
-                            <div class="time">
-                                <em>2013</em>年<em>4</em>月<b>-</b><em>2013</em>年<em>10</em>月
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!--作品4-->
-                    <div class="item">
-                        
-                        <div class="banner product_h4">
-                            <div class="logo r5"></div>
-                            <div class="banner_bg"></div>
-                        </div>
-                        <div class="descprition">
-                            <h3><i aria-hidden="true" data-icon="&#xe021;"></i>云边轻博客2.0<a href="http://t.anythink.com.cn/" target="_blank" class="btn_green r5">访问</a></h3>
-                            <p>2012年3月份，因为自己上一个作品是基于云边1.0的，所以联系到了1.0的创建人，共同开发2.0，之后又增加了几个小伙伴，就这样，大家都是利用业余时间用了4个月完成了云边2.0的程序，不过看到很多站长拿来尝试还是很有成就感，当然，还存在一些bug...</p>                      
-                            <p class="pic">
-                                <img src="images/pic_yb_index.jpg" alt="安装" />
-                                <span>开始安装</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_yb_install.jpg" alt="安装配置" />
-                                <span>安装配置</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_yb_home.jpg" alt="首页" />
-                                <span>首页</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_yb_theme1.jpg" alt="主题1" />
-                                <span>我的主题1</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_yb_theme2.jpg" alt="主题2" />
-                                <span>我的主题2</span>
-                            </p>
-                            <div class="time">
-                                <em>2012</em>年<em>3</em>月<b>-</b><em>2012</em>年<em>7</em>月
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!--作品5-->
-                    <div class="item">
-                        
-                        <div class="banner product_h5">
-                            <div class="logo r5"></div>
-                            <div class="banner_bg"></div>
-                        </div>
-                        <div class="descprition">
-                            <h3><i aria-hidden="true" data-icon="&#xe0eb;"></i>发泄吧<a href="http://www.faxieba.net" target="_blank" class="btn_green r5">访问</a></h3>
-                            <p>发泄吧就是基于云边1.0开发的，所以才有了和云边合作的想法。</p>
-                            <p class="quote">2011年11月末着手开始花了3个多月创办了发泄吧，运营没多久就卖了，当时的运营在现在来看还是不错的....</p>
-                            <p class="pic">
-                                <img src="images/pic_fxb_banner.jpg" alt="效果图" />
-                                <span>宣传图</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_fxb_index.jpg" alt="首页" />
-                                <span>首页</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_fxb_post.jpg" alt="扔纸条" />
-                                <span>“扔纸条”</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_fxb_game.jpg" alt="游戏中心" />
-                                <span>游戏中心</span>
-                            </p>
-                            <div class="time">
-                                <em>2011</em>年<em>11</em>月<b>-</b><em>2012</em>年<em>2</em>月
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!--更多作品-->
-                    <div class="item">
-
-                        <div class="banner product_h6">
-                            <div class="logo r5">More</div>
-                            <div class="banner_bg"></div>
-                        </div>
-                        <div class="descprition">
-                            <h3><i aria-hidden="true" data-icon="&#xe0e8;"></i>更多作品</h3>
-                            <p>2012年8月份打算做一个母婴类电商，但最终未能完成...留下了以下遗产。</p>
-                            <p class="pic">
-                                <img src="images/pic_other_01.jpg" alt="宝贝时光" />
-                                <span>宝贝时光</span>
-                            </p>
-                            <p></p>
-                            <p>2013年11月，在迈远为Soufeel制作web mobile版本(http://m.soufeel.com)</p>
-                            <p class="pic">
-                                <img src="images/pic_other_02.jpg" alt="Soufeel移动版" />
-                                <span>Soufeel移动版</span>
-                            </p>
-                            <p></p>
-                            <p>2014年3月，接触phonegap，尝试基于jquery做了一个类Flappy Bird的游戏《Pig's Dream》，由于jquery在ios下的效果不尽人意，更不用说在Android的，所以对其做了一些优化，将animate改为transform后动画流畅，不过还是因为小猪更新位移和声音的一些问题在ios4设备下会卡顿，并没有将其上线（估计即使申请apple store也会被驳回）。</p>
-                            <p class="pic">
-                                <img src="images/pic_other_03.png" alt="Pig's Dream" />
-                                <span>Pig's Dream</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_other_04.png" alt="Pig's Dream" />
-                                <span>Pig's Dream</span>
-                            </p>
-                            <p class="pic">
-                                <img src="images/pic_other_05.png" alt="Pig's Dream" />
-                                <span>Pig's Dream</span>
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!-- 左右控制 -->
-                <a class="carousel-control left" href="#tip_carousel" data-slide="prev">
-                    <i aria-hidden="true" data-icon="&#x34;"></i>
-                </a>
-                <a class="carousel-control right" href="#tip_carousel" data-slide="next">
-                    <i aria-hidden="true" data-icon="&#x35;"></i>
-                </a>
-
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/agency-elevation.svg"
+                alt="Agency elevation"
+                class="logo hide to-top"
+              /><img
+                loading="lazy"
+                src="assets/images/trusted-by/gitlab.svg"
+                alt="Ron jones"
+                class="logo"
+              /><img
+                loading="lazy"
+                src="assets/images/trusted-by/duolingo.svg"
+                alt="Mighty furniture's"
+                class="logo hide to-bottom"
+              />
             </div>
-
-
+            <div class="logo-group">
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/coyote.svg"
+                alt="Bulls eye"
+                class="logo hide to-top"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/astrato.svg"
+                alt="Chippy"
+                class="logo"
+              />
+              <img
+                loading="lazy"
+                src="assets/images/trusted-by/mercado.svg"
+                alt="Fastlane"
+                class="logo hide to-bottom"
+              />
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="bye"><span>再见</span></div>
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-boxes">
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">portfolio template</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  A free to use, minimal and accessible portfolio template for
+                  developers.
+                </p>
+                <!-- Add technologies you used to build the project -->
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>Gatsby</li>
+                  <li>SCSS</li>
+                  <li>MDX</li>
+                </ol>
 
-        <!--Jquery 2.1 不支持ie6、7、8-->
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="https://github.com/devsyedmohsin" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
 
-        <!--jquery 局部打印-->
-        <script type="text/javascript" src="js/jQuery.print.js"></script>
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://github.com/devsyedmohsin"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
 
-        <!--jquery 动画-->
-        <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+         <!-- Update img src and alt attribute  -->
 
-        <!--jquery 轮播-基于bootstrap carousel-->
-        <script type="text/javascript" src="js/carousel.min.js"></script>
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/portfolio-template.webp"
+                  alt="agency elevation"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">agencyelevation.com</h3>
+                <!-- Add small description of your project  -->
 
-        <!--jquery annyang sound control-->
-        <script type="text/javascript" src="js/annyang.min.js"></script>
+                <p class="work-text">Website for Agency Elevation.</p>
+                <ol class="work-technologies">
+                  <li>React</li>
+                  <li>Gatsby</li>
+                  <li>Material UI</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
 
-        <!--jquery loadding-->
-        <script type="text/javascript" src="js/pace.min.js"></script>
+                     <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="http://github.com/devsyedmohsin"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/agency-elevation.webp"
+                  alt="portfolio template"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">contribute.dev</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  Website for DevX A dedicated space for developer experience
+                </p>
+                <ol class="work-technologies">
+                  <li>Ruby</li>
+                  <li>SvelteKit</li>
+                  <li>Emotion</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a href="#" target="_blank" rel="noopener" class="link"
+                    >Explore this project</a
+                  >
 
-        <!--effect-->
-        <script type="text/javascript" src="js/common.js"></script>
+                   <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+         <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/contribute-dev.webp"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    </body>
+      <!-- I write blog posts on dev.to at https://dev.to/devsyedmohsin. I have linked my articles accordingly, so please update the article title, description, and link accordingly. For example, if you write an article on Medium, link your article to Medium. Also, don't forget to update the reaction count. -->
+
+      <section class="article">
+        <div class="container">
+          <h2 class="h2" id="blog">My Articles</h2>
+          <div class="article-boxes">
+            <article class="article-box featured-article">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h3">
+                    22 Useful CSS Tips and Tricks Every Developer Should Know
+                  </h3>
+                  <p class="article-text">
+                    Note: All the tips, tricks shared in this article are part
+                    of my GitHub repository css tips tricks A handmade
+                    collection of pro css tips tricks for developers.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://dev.to/devsyedmohsin" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img src="./assets/images/heart-outline.svg" alt="heart" />
+                    416
+                  </span>
+                </div>
+              </div>
+              <picture class="article-illustration">
+                <img
+                  src="assets/images/featured-blog.webp"
+                  alt="MacBook Pro"
+                  loading="lazy"
+                />
+              </picture>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">JavaScript Default Function Parameters.</h3>
+                  <p class="article-text">
+                    In JavaScript when we call a function which expects some
+                    data to be passed in if you call that without passing
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://dev.to/devsyedmohsin" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    47
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">
+                    Free Open-source portfolio template for developers ✨
+                  </h3>
+                  <p class="article-text">
+                    A beautiful, minimal and accessible portfolio template for
+                    Developers which is completely free and Open Source.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a href="https://dev.to/devsyedmohsin/free-open-source-portfolio-template-for-developers-4g1d" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                      loading="lazy"
+                    />
+                    177
+                  </span>
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">HTML tips and tricks.</h3>
+                  <div class="article-text">
+                    In my very last article I shared some JavaScript tips and
+                    tricks In this article I will be covering HTML tips and
+                    tricks.
+                  </div>
+                </div>
+                <div class="article-info">
+                  <a href="https://dev.to/devsyedmohsin" class="link" target="_blank" rel="noopener"
+                    >Continue reading</a
+                  >
+                  <span class="reaction-count">
+                    <img
+                      loading="lazy"
+                      src="./assets/images/heart-outline.svg"
+                      alt="heart"
+                    />
+                    350
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Update skills-img src, alt  and title attributes I have added some other logos in assets/images/skill for your convenience feel free to pick one if required  -->
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+                <img src="assets/images/skills/react.webp" alt="React" class="skills-img" loading="lazy" title="React">
+                <img src="assets/images/skills/svelte.webp" alt="Svelte" class="skills-img" loading="lazy" title="Svelte">
+                 <img src="assets/images/skills/typescript.webp" alt="Typescript" class="skills-img" loading="lazy" title="Typescript">
+                 <img src="assets/images/skills/a11y.webp" alt="Accessibility" class="skills-img" loading="lazy" title="Web Accessibility">
+                 <img src="assets/images/skills/shell.webp" alt="Shell" class="skills-img" loading="lazy" title="Shell">
+                 <img src="assets/images/skills/next-js.webp" alt="NextJS" class="skills-img" loading="lazy" title="NextJS">
+                 <img src="assets/images/skills/graphql.webp" alt="Graph Ql" class="skills-img" loading="lazy" title="Graph QL">
+                 <img src="assets/images/skills/git.webp" alt="Git" class="skills-img" loading="lazy" title="Git">
+                 <img src="assets/images/skills/html.webp" alt="CSS" class="skills-img" loading="lazy" title="CSS">
+                 <img src="assets/images/skills/js.webp" alt="JavaScript" class="skills-img" loading="lazy" title="JavaScript">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Replace testimonials, author name, author job, img src and, alt attributes -->
+
+      <section>
+        <h2 class="h2">Testimonials</h2>
+        <div class="container">
+          <ol class="testimonials">
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Working with Syed was a great experience. His drive for clean aesthetics and his open communication style helped us collaborate closely on the solution.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/rich-harris.png"
+                  alt="Rich Harris"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Harris Kareem</h3>
+                  <p class="testimonial-author-job">Developer @Outlets</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Syed is a fantastic UI/UX designer and developer with a keen sense for marketing, and lead generation. He's the only designer I know who also has a deep understanding for code and front-end development.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/frank-mcsherry.webp"
+                  alt="Andrew Mead"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">
+                   Andrew Mead
+                  </h3>
+                  <p class="testimonial-author-job">Chief Scientist @Logos
+                  </p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+             
+                Talented artist, experienced with various
+                media and can make any project you are working on look good. He is
+                easy to work with and is a self starter. I would work with Syed
+                again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/brian-hirsh.png"
+                  alt="Brian Hirsh"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Brian Hirsh</h3>
+                  <p class="testimonial-author-job">Head @Zero-in</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Syed is a true professional with amazing talent. He is a creative
+                thinker, has his finger on the pulse of whats to come, and
+                absolutely one of the quickest and best problem solvers I have
+                ever met.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/adam.png"
+                  alt="Adam Argalye"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Adam Argalye</h3>
+                  <p class="testimonial-author-job">SWE @Google</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+               Syed is one of my favourite people to work with. He's my go-to colleague when trouble shooting any new technique or technology because she understands how to tackle unknown problems with gumption. 
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/val-head.png"
+                  alt="Val Head"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Val Head</h3>
+                  <p class="testimonial-author-job">CEO @Engines</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="testimonial">
+              <blockquote class="testimonial-text">
+                Syed is a talented artist. He is very experienced with various
+                media and can make any project you are working on look good. He is
+                easy to work with and is a self starter. I would work with Syed
+                again.
+              </blockquote>
+              <figure class="testimonial-author">
+                <img
+                  src="assets/images/testimonials/tim-satterwhite.webp"
+                  alt="Gary Simon"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <h3 class="testimonial-author-name">Gary Simon</h3>
+                  <p class="testimonial-author-job">A11y Advocate @W3C</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                I'm also an open-source developer, and in my spare time, I do
+                digital art with my iPad Pro.
+              </p>
+              <!-- Replace src with your signatures and name -->
+              <img
+                src="assets/images/signatures.png"
+                alt="Vic Brandon"
+                class="signatures"
+                loading="lazy"
+              />
+            </div>
+            <form action="#" class="contact-form" netlify>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Codepen" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/codepen.svg"
+                    alt="Codepen"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener" href="https://vicbrandon.github.io">Vic Brandon.</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
